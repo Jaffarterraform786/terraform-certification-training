@@ -1,4 +1,4 @@
-/*provider "aws" {
+provider "aws" {
   access_key = ""
   secret_key = ""
   region     = "ap-south-1"
@@ -21,8 +21,8 @@ resource "aws_instance" "myec2" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("./yyyy.pem")
+    private_key = file("./newpemkeyfile.pem")
     host        = self.public_ip
   }
 }
-*/
+
